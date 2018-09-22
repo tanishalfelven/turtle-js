@@ -1,0 +1,13 @@
+{
+  "name": "turtle-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".\\src\\turtle\\index.js",
+  "scripts": {
+    "start" : "rollup --config",
+    "test"  : "node .\\src\\example\\index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
