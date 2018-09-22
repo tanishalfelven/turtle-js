@@ -1,3 +1,19 @@
 const t = require("../../turtle");
 
-console.log(t`div ${ "hello world" }`);
+// example of html generation
+console.log(
+    t`tr ${
+        t.repeat(5)`td ${
+            "hello world"
+            }`
+        }`
+);
+
+// outputs
+// <tr>
+//     <td>hello world</td>
+//     <td>hello world</td>
+//     <td>hello world</td>
+//     <td>hello world</td>
+//     <td>hello world</td>
+// </tr>

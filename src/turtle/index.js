@@ -52,15 +52,17 @@ function turtle(slices, ...vars) {
     ).join("");
 };
 
-turtle.prototype.turtle = function repeat(n, renderer) {
+function repeat(n, renderer) {
     return (...templData) => {
         let str = "";
         for (let i = 0; i < n; i++) {
-            str += renderer(...templData);
+            str += turtle(...templData);
         }
 
         return str;
     }
 }
 
-export default turtle;
+const t = turtle;
+t.repeat = repeat;
+export default t;

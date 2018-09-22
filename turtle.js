@@ -52,15 +52,18 @@ function turtle(slices, ...vars) {
         }).join("")
     ).join("");
 }
-turtle.prototype.turtle = function repeat(n, renderer) {
+function repeat(n, renderer) {
     return (...templData) => {
         let str = "";
         for (let i = 0; i < n; i++) {
-            str += renderer(...templData);
+            str += turtle(...templData);
         }
 
         return str;
     }
-};
+}
 
-module.exports = turtle;
+const t = turtle;
+t.repeat = repeat;
+
+module.exports = t;
