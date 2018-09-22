@@ -52,6 +52,9 @@ function turtle(slices, ...vars) {
         }).join("")
     ).join("");
 }
+function map(arr, callback) {
+    return arr.map(callback).join("");
+}
 function repeat(n, renderer) {
     return (...templData) => {
         let str = "";
@@ -65,5 +68,6 @@ function repeat(n, renderer) {
 
 const t = turtle;
 t.repeat = repeat;
+t.map = map;
 
 module.exports = t;
